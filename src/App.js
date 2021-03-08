@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Home from "./Home";
+import Checkout from "./Checkout";
 import './App.css';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
@@ -9,19 +10,16 @@ function App() {
   return (
     <Router>
       <div className="App">
+      <Header />
         <Switch>
           <Route path="/checkout">
-            <Header />
-            <h1> I AM A CHECKOUT, SMASH THE LIKE BUTTON </h1>
+            <Checkout />
           </Route>
-          
+
           <Route path="/">
-            <Header />
             <Home />
           </Route>
         </Switch>
-
-        
       </div>
     </Router>
 
